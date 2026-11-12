@@ -4,6 +4,7 @@ import sys
 
 from CalcRating import CalcRating
 from TextDataReader import TextDataReader
+from CalcAcademicDebt import CalcAcademicDebt
 
 
 def get_path_from_arguments(args) -> str:
@@ -23,6 +24,9 @@ def main():
 
     rating = CalcRating(students).calc()
     print("Rating: ", rating)
+
+    academic_debts = CalcAcademicDebt(students).calc()
+    print("Students with academic debts: ", academic_debts)
 
 
 if __name__ == "__main__":
